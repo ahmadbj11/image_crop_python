@@ -26,10 +26,10 @@ Untuk ukuran cropping terdapat filter, dimana nilai yang di input tidak boleh le
 <img src="https://github.com/ahmadbj11/image_crop_python/blob/main/images/A4.png" width="50%"/><br>
 
 <b>5. Proses Cropping</b><br>
-Jika pilihan posisi dan ukuran sudah sesuai maka kita dapat langsung menekan tombol crop
-<img src="https://github.com/ahmadbj11/image_crop_python/blob/main/images/A5.png" width="50%"/>
+Jika pilihan posisi dan ukuran sudah sesuai maka kita dapat langsung menekan tombol crop<br>
+<img src="https://github.com/ahmadbj11/image_crop_python/blob/main/images/A5.png" width="50%"/><br>
 
-### Hasil Cropping
+<b>6. Hasil Cropping</b><br>
 Setelah tombol cropping di klik, maka hasil cropping akan langsung ditampilkan, dan jika kita ingin mengulangi proses cropping dapat menekan tombol kembali<br>
 <img src="https://github.com/ahmadbj11/image_crop_python/blob/main/images/A6.png" width="50%"/>
 
