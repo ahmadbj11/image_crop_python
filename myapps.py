@@ -33,18 +33,13 @@ def crop_by_position(img, position, size):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Ambil gambar yang diunggah
         uploaded_file = request.files['image']
         img = cv2.imdecode(np.frombuffer(uploaded_file.read(), np.uint8), cv2.IMREAD_UNCHANGED)
-
-        # Ambil data dari form
         position = request.form['position']
         size = int(request.form['size'])
-
         # Validasi ukuran potongan tidak melebihi ukuran gambar
         if size > min(img.shape[0], img.shape[1]):
             return render_template('index.html', error_message='Ukuran potongan melebihi ukuran gambar yang diunggah.')
-
         # Memotong gambar
         cropped_img = crop_by_position(img, position, size)
         current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
@@ -55,7 +50,6 @@ def index():
             #simpan nama file dengan nama posisi dan waktu saat ini
         save_path = os.path.join(folder_name, f'{position}_{current_time}.jpg')
         cv2.imwrite(save_path, cropped_img)
-
         # Tampilkan gambar hasil potong
         return render_template('result.html', image_path=save_path)
 
